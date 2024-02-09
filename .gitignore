@@ -1,2 +1,4 @@
 .pio
 .idea
+texts.json
+src/texts.gen.cpp
