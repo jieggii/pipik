@@ -24,15 +24,15 @@ enum ArduinoState {
     TEXT,
 };
 
+ArduinoState STATE = ArduinoState::SENSOR;
+
 uint8_t PREV_TEXT_INDEX = 255;
 
 const unsigned short SENSOR_DISPLAY_INTERVAL = 1000;
-const unsigned short TEXT_DISPLAY_INTERVAL = 2000;
+const unsigned short TEXT_DISPLAY_INTERVAL = 4000;
 
 unsigned long SENSOR_LAST_DISPLAY_MILLIS = 0;
 unsigned long TEXT_LAST_DISPLAY_MILLIS = 0;
-
-ArduinoState STATE = ArduinoState::SENSOR;
 
 LiquidCrystal_I2C LCD(LCD_ADDR, LCD_COLS, LCD_ROWS);
 DHT DHT_SENSOR(PIN_DHT, DHT_TYPE);
